@@ -24,20 +24,29 @@ async function exibirImagens() {
 
     produtosSnapshot.forEach((doc) => {
       const data = doc.data();
-      const imgUrl = data.imgP; 
+      const imgUrl = data.imgP;
+      const name = data.nome; 
 
       // Criar um elemento de imagem e atribuir a URL como a origem (src) da imagem
       const imgElement = document.createElement("img");
       imgElement.src = imgUrl;
       imgElement.classList.add("img");
 
-      const fimg = document.createElement("div");
-      fimg.classList.add("fimg");
-      fimg.appendChild(imgElement);
-
+      const fundo1 = document.createElement("div");
+      fundo1.classList.add("fundo1");   
+      const titulo = document.createElement("h1");
+      titulo.classList.add("nome")
+      titulo.innerHTML= name;
+      const linha  = document.createElement("div");
+      linha.classList.add("linha");
       const li = document.createElement("li");
-      li.appendChild(fimg);
+     
 
+  
+      fundo1.appendChild(imgElement);
+      fundo1.appendChild(titulo)
+      fundo1.appendChild(linha)
+      li.appendChild(fundo1);
       produtos.appendChild(li);
     });
   } catch (error) {
