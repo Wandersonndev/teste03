@@ -25,13 +25,13 @@ document.getElementById("login-form").addEventListener("submit", (event) => {
   event.preventDefault(); // Evitar o comportamento padrão do formulário
 
   const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
+  const password = document.getElementById("email").value;
 
   // Autenticar o usuário com o e-mail e senha fornecidos
   signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       // O login foi bem-sucedido, redirecionar para a página de administração
-      window.location.href = "/html/admin.html";
+      window.location.href = "/admin.html";
     })
     .catch((error) => {
       // Tratar erros de autenticação, por exemplo, exibir uma mensagem de erro para o usuário

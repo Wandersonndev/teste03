@@ -15,6 +15,26 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 const produtos = document.getElementById("produtos");
+const imgdiv = document.getElementById("imgdiv");
+
+async function perfil(){
+  try{
+    const imgperfil = collection(db, "perfil");
+    const Urlperfil = await getDocs(imgperfil);
+
+    Urlperfil.forEach((doc) =>{
+      const datap = doc.data();
+      const perfilurl = datap.perfil;
+      const imgpp = document.createElement("img");
+      imgpp.src = perfilurl
+      imgdiv.appendChild(imgpp)
+
+    })
+
+  }catch(error){
+    console.error("Erro ao obter dados do Firestore:", error);
+  }
+};
 
 // Função para exibir as imagens dos produtos do Firestore
 async function exibirImagens() {
@@ -26,6 +46,7 @@ async function exibirImagens() {
       const data = doc.data();
       const imgUrl = data.imgP;
       const name = data.nome; 
+      const preco = data.precos
 
       // Criar um elemento de imagem e atribuir a URL como a origem (src) da imagem
       const imgElement = document.createElement("img");
@@ -39,6 +60,9 @@ async function exibirImagens() {
       titulo.innerHTML= name;
       const linha  = document.createElement("div");
       linha.classList.add("linha");
+      const precos = document.createElement("h2");
+      precos.classList.add("precos")
+      precos.innerHTML= preco
       const li = document.createElement("li");
      
 
@@ -46,6 +70,7 @@ async function exibirImagens() {
       fundo1.appendChild(imgElement);
       fundo1.appendChild(titulo)
       fundo1.appendChild(linha)
+      fundo1.appendChild(precos)
       li.appendChild(fundo1);
       produtos.appendChild(li);
     });
@@ -55,5 +80,8 @@ async function exibirImagens() {
 }
 
 // Chamar a função para exibir as imagens quando a página carregar
-window.addEventListener("load", exibirImagens);
+window.addEventListener("load",() =>{
+  exibirImagens();
+  perfil();
+});
 
