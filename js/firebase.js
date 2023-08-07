@@ -31,7 +31,7 @@ document.getElementById("login-form").addEventListener("submit", (event) => {
   signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       // O login foi bem-sucedido, redirecionar para a página de administração
-      window.location.href = "/admin.html";
+      window.location.href = "../admin.html";
     })
     .catch((error) => {
       // Tratar erros de autenticação, por exemplo, exibir uma mensagem de erro para o usuário
