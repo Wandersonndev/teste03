@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&display=swap');
 
 
 *{
@@ -7,8 +8,20 @@
 
 .title{
   background-color: #FFA500;
-  color: white;
+  color: #FFFFFF;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+
+  
+  
+}
+.liz{
+  font-family: 'Playfair Display', serif;
+ font-size: 27px;
+  
 }
 .imgdiv{
   text-align: center;
@@ -66,14 +79,14 @@ ul li{
 
   .fundo1 {
     background-color: white ;
-    width: 300px;
-    height: 500px;
+    width: 389px;
+    height: 807px;
     margin-bottom: 5px;
   }
 
   .img {
-    width: 296px;
-  height: 444px;
+    width: 365px;
+  height: 548px;
 }
 
 
@@ -84,5 +97,27 @@ ul li{
       flex-direction: column;
       
   
+    }
+    ul li{
+    display: flex;
+   justify-content: center;
+   align-items: center; 
+   text-align: center;
+    }
+    .liz{
+     font-size: 22px;
+      
+    }
+    nav{
+      background-color: #F3F3F3;
+      text-align:center;
+      padding: 7px;
+      display: flex;
+      flex-direction: column;
+      
+    }
+    .selectM{
+      border-radius: 1px;
+      height: 35px;
     }
 }
