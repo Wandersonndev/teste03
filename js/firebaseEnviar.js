@@ -36,7 +36,7 @@ document.getElementById("dados").addEventListener("submit", async (event) => {
       cor: cor
     });
     console.log("dados adicionados ao Firestore");
-    window.location.href = "/html/admin.html";
+    window.location.href = "./admin.html";
   } catch (error) {
     console.error("Erro ao enviar dados para o Firestore:", error);
   }
