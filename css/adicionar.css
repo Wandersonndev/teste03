@@ -1,4 +1,78 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+body{ 
+  background: linear-gradient(to bottom, #ccb3d2e1 10%, #EAE7EF), url('/img/nuvem.jpg');
+    background-size: cover;
+}
+main{
+  display: flex;
+  justify-content: center;
+}
+form{
+  background-color: #CCB3D2;
+  width: 500px;
+  height: 100vh;
+  padding: 5px;
+  box-shadow: 1px 1px 7px 1px rgba(0, 0, 0, 0.475);
+}
+.divFotoPrincipal{
+  
+  display: flex;
+}
+.divnome{
+  margin-left: 10px;
+}
+.nome{
+  font-size: 20px;
+  margin: 5px 1px 5px 1px ;
+  border-radius: 5px;
+}
+.inputselect{
+  color: #C26E3A;
+  font-size: 15px;
+  padding: 1px;
+  margin: 0px 0px 5px 0px;
+  border-radius: 5px;
+}
+
 #imgP{
   width: 100px;
   height: 100px;
+}
+.img-select{
+  background-color: white;
+  width: 150px;
+  height: 150px;
+  border-radius: 6px;
+  border: 2px solid rgba(0, 0, 0, 0.66);
+
+}
+
+.div-img{
+ 
+  display: flex;
+}
+.label-img{
+    width: 150px;
+     margin: 5px 15px 5px 5px;
+     
+    cursor: pointer;
+  }
+.img-catalago{
+  opacity: 0;
+    width: 0.1px;
+    height: 0.1px;
+    position: absolute;
+    z-index: -1;
+}
+.divcor{
+  border:1px solid black;
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center;
+}
+.labelcor{
+  font-size: 18px;
 }

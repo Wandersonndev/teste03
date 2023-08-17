@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  /* Esconde o texto do input type="file" */
+  input[type="file"] {
+    opacity: 0;
+    width: 0.1px;
+    height: 0.1px;
+    position: absolute;
+    z-index: -1;
+  }
+
+  /* Estiliza um estilo para o botão de seleção de arquivo */
+  label.file-label {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<label class="file-label">
+  Selecione um arquivo
+  <input type="file">
+</label>
+
+</body>
+</html>

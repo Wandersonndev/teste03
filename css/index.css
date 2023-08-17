@@ -5,10 +5,14 @@
   margin: 0px;
   padding: 0px;
 }
+body{
+  background: linear-gradient(to bottom, #ccb3d2e1 10%, #EAE7EF), url('/img/nuvem.jpg');
+    background-size: cover;
+}
 
 .title{
-  background-color: #FFA500;
-  color: #FFFFFF;
+  background-color: #ccb3d2e1;
+  color: #444444;
   height: 70px;
   display: flex;
   justify-content: center;
@@ -26,20 +30,22 @@
 .imgdiv{
   text-align: center;
   padding: 40px 0px 40px 0px ;
+
 }
 .imgdiv img{
   height: 160px;
   width: 160px;
   border-radius: 100% ;
+  border: 1px solid #444444
   
 }
 nav{
-  background-color: #F3F3F3;
+  background-color: #EAE7EF;
   text-align: right;
   padding: 40px;
 }
 main{
-  background-color: #F3F3F3;
+  background-color: #EAE7EF;
 }
 main ul{
   display: flex;

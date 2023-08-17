@@ -10,18 +10,28 @@
 <script src="js/foto64.js"></script>
 
 <body>
+
+  <main>
   <form id="dados">
-    <div id="imgPrincipal"></div>
-    <input type="file" id="fotoU" name="fotoU" accept="image/*" onchange="converterImagem()">
-    <input type="text" id="fotoP" name="fotoP" ><br>
-    <input type="text" id="name" required placeholder="name"><br>
-   <select name="generos" id="generos">
-    <option value="generos">Gêneros</option>
-    <option value="masculine">Masculine</option>
-    <option value="feminine"> Feminine</option>
-   </select>
-    <!--CATEGORIAS-->
-    <select name="categorias" id="categorias">
+    <!--Imagem do perfil-->
+    <div class="divFotoPrincipal">
+      <label class="imgPrincipal">
+        <img src="img/img.png" alt="img-select" class="img-select" id="imgPrincipal"><br>
+
+        <input type="file" id="fotoU" name="fotoU" accept="image/*" onchange="converterImagem()" class="img-catalago">
+        
+      </label>
+      <div class="divnome">
+      <input type="text" class="nome" id="name" required placeholder="name">
+      <br>
+      <!--genero-->
+    <select name="generos" id="generos" class="inputselect">
+      <option value="generos">GÊNEROS</option>
+      <option value="masculine">MASCULINO</option>
+      <option value="feminine"> FEMININO</option>
+     </select><br>
+      <!--CATEGORIAS-->
+    <select name="categorias" id="categorias" class="inputselect">
       <option value="categorias">CATEGORIAS</option>
       <option value="acessorios">ACESSORIOS</option>
       <option value="babydollepijamas">BABYDOLL E PIJAMAS</option>
@@ -35,9 +45,9 @@
       <option value="hobby">HOBBY</option>
       <option value="basico">BÁSICO</option>
       <option value="sembojo">SEM BOJO</option>
-    </select>
+    </select><br>
     <!--COLEÇÕES-->
-    <select name="colecoes" id="colecoes">
+    <select name="colecoes" id="colecoes" class="inputselect">
       <option value="colecoes">COLEÇÕES</option>
       <option value="conjuntos">CONJUNTOS</option>
       <option value="camisolas">CAMISOLAS</option>
@@ -47,11 +57,73 @@
       <option value="bodys">BODY´S</option>
       <option value="acessorios">ACESSORIOS</option>
     </select><br>
-     <input type="number" id="precos" placeholder="precos"required>
-     <input type="text" id="cor" required placeholder="cor"><br>
 
+      </div>
+    </div>
+    <div class="div-img">
+      <label class="label-img">
+      <img src="img/img.png" alt="img-select" class="img-select" id="img1"><br>
+      <input type="file" id="foto1" name="foto1" accept="image/*" onchange="converterImagem1()" class="img-catalago">
+    </label>
+
+    <label class="label-img">
+      <img src="img/img.png" alt="img-select" class="img-select" id="img2"><br>
+      <input type="file" id="foto2" name="foto2" accept="image/*" onchange="converterImagem2()" class="img-catalago">
+    </label>
+
+    <label class="label-img">
+      <img src="img/img.png" alt="img-select" class="img-select" id="img3"><br>
+      <input type="file" id="foto3" name="foto3" accept="image/*" onchange="converterImagem3()" class="img-catalago">
+    </label>
+    </div>
+
+    <input type="text" id="fotoP" name="fotoP" ><br>
+    <input type="text" id="img11" name="img11" ><br>
+    <input type="text" id="img22" name="img22" ><br>
+    <input type="text" id="img33" name="img33" ><br>
+   
     <br>
+    <input type="number" id="precos" placeholder="precos"required>
+    <input type="text" id="cor" required placeholder="cor"><br>
+    <!--Cores-->
+    <div class="divcor">
+      <label class="labelcor">
+       <input type="checkbox" id="preto">Preto
+      </label>
+      <label class="labelcor">
+        <input type="checkbox" id="azul">Azul
+       </label>
+       <label class="labelcor">
+        <input type="checkbox" id="azulmarinho">Azul Marinho
+       </label>
+       <label class="labelcor">
+        <input type="checkbox" id="avermelho">Vermelho
+       </label>
+       <label class="labelcor">
+        <input type="checkbox" id="amarelo">Amarelo
+       </label>
+       <label class="labelcor">
+        <input type="checkbox" id="roxo">Roxo
+       </label>
+       <label class="labelcor">
+        <input type="checkbox" id="verde">Verde
+       </label>
+       <label class="labelcor">
+        <input type="checkbox" id="laranja">Laranja
+       </label>
+       <label class="labelcor">
+        <input type="checkbox" id="Rosa">Rosa
+       </label><label class="labelcor">
+        <input type="checkbox" id="base">Base
+       </label>
+       <label class="labelcor">
+        <input type="checkbox" id="azulescuro">Azul Escuro
+       </label>
+
+    </div>
    <button type="submit">vvvv</button>
+  </form>
+  </main>
   </form>
   
 </body>
