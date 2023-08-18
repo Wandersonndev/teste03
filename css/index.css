@@ -6,7 +6,7 @@
   padding: 0px;
 }
 body{
-  background: linear-gradient(to bottom, #ccb3d2e1 10%, #EAE7EF), url('/img/nuvem.jpg');
+  background: linear-gradient(to bottom, #ccb3d2e1 10%, #EAE7EF), url('./img/nuvem.jpg');
     background-size: cover;
 }
 
