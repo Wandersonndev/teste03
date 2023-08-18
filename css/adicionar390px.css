@@ -1,0 +1,76 @@
+@media screen and (max-width: 393px){
+  .divFotoPrincipal{
+    display: inline;
+  }
+  main{
+    width: 407px;
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh;
+  }
+  
+  form{
+    background-color:transparent;
+    height: 100vh;
+    padding: 5px;
+    box-shadow: 1px 1px 7px 1px rgba(0, 0, 0, 0.475);
+    justify-content: flex-start;
+    
+  }
+  .divnome{
+    width: 367px;
+    margin: 0px;
+    padding: 2px;
+    
+  }
+  .nome{
+    width: 100%;
+    font-size: 20px;
+    margin: 5px 0px 5px 0px ;
+    border-radius: 5px;
+    border: 1px solid black;
+    text-align: center;
+
+    
+  }
+  .inputselect{
+    color: #C26E3A;
+    width: 100%;
+    font-size: 15px;
+    padding: 1px;
+    margin: 0px 0px 5px 0px;
+    border-radius: 5px;
+    text-align: center;
+  }
+  
+  .div-img{
+     flex-direction: column;
+     width: 400px;
+    }
+     
+  #imgPrincipal{
+    background-color: white;
+    width: 150px;
+    height: 150px;
+    margin: 4px;
+    border-radius: 6px;
+    border: 2px solid rgba(0, 0, 0, 0.66);
+  }
+  .img-select{
+    background-color: white;
+    width: 340px;
+    height: 340px;
+    border-radius: 6px;
+    border: 2px solid rgba(0, 0, 0, 0.66);
+    margin-left: 13px;
+  
+  }
+  .divcor{
+    width: 367px;
+    border:1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+  }
+  }
