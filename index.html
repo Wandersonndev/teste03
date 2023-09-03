@@ -4,64 +4,83 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/index.css">
+<link rel="stylesheet" href="./css/ul.css">
+<script src="./js/slide.js"></script>
+<script type="module" src="./js/index.js"></script>
+<script src="./js/whatsapp.js"></script>
 </head>
-<link rel="stylesheet" href="css/index.css">
-<script type="module" src="js/index.js"></script>
-<script src="js/select.js"></script>
 <body>
   <header>
-    <div class="title"><span class="liz">Liz Tiernan Lingerie</span></div>
-    <div class="imgdiv" id="imgdiv"></div>
+    <div class="divRedesSocil">
+      <ul>
+        <li><a href="#"><img src="" alt="Instagram"></a></li>
+        <li><a href="#"><img src="" alt="facebook"></a></li>
+      </ul>
+      <div class="divSearch"><img src="img/btn-search.png" alt="Search"></div>
+    </div>
   </header>
   <nav>
-    <!-- seletor de generos-->
-    <select name="Generos" id="Generos" class="selectM">
-      <option value="Generos">Gêneros</option>
-      <option value="1">FEMININO</option>
-      <option value="2">MASCULINO</option>
-      <option value="3">ACESSÓRIOS</option>
-    </select>
-    <!--CATEGORIAS-->
-    <select name="categorias" id="categorias" class="selectM">
-      <option value="categorias">CATEGORIAS</option>
-      <option value="acessorios">ACESSORIOS</option>
-      <option value="babydollepijamas">BABYDOLL E PIJAMAS</option>
-      <option value="calcinhas">CALCINHAS</option>
-      <option value="camisolaserobes">CAMISOLAS E ROBES</option>
-      <option value="conjuntos">CONJUNTOS</option>
-      <option value="cuecas">CUECAS</option>
-      <option value="meias">MEIAS</option>
-      <option value="sutias">SUTIÂS</option>
-      <option value="body">BODY</option>
-      <option value="hobby">HOBBY</option>
-      <option value="basico">BÁSICO</option>
-      <option value="sembojo">SEM BOJO</option>
-    </select>
-    <!--COLEÇÕES-->
-    <select name="colecoes" id="colecoes" class="selectM">
-      <option value="colecoes">COLEÇÕES</option>
-      <option value="conjuntos">CONJUNTOS</option>
-      <option value="camisolas">CAMISOLAS</option>
-      <option value="babydolls">BABYDOLLS</option>
-      <option value="avulso">AVULSO</option>
-      <option value="plussize">PLUS SIZE</option>
-      <option value="bodys">BODY´S</option>
-      <option value="acessorios">ACESSORIOS</option>
-    </select>
+    <div class="navcenter">
+    <img src="img/logo.png" alt="" class="logo-image">
+    <div class="divButtonNav">
+      <select name="menu" id="menu">
+        <option value="home">Home</option>
+        <option value="Contatos">Contatos</option>
+        <option value="sobre">Sobre</option>
+        <option value="">Exemplo</option>
+        
+      </select>
+    </div>
+    </div>
   </nav>
   <main>
-    <ul id="produtos">
-    </ul>
+    <!--Imagens rotativas-->
+    <section class="slidese">
+      <div class="slideshow-container">
+     <div class="slide">
+      <img src="./img/slide_1.jpg" alt="slide">
+     </div>
+     <div class="slide">
+      <img src="./img/slide_2.jpg" alt="slide">
+     </div>
+     <div class="slide">
+      <img src="./img/slide_3.jpg" alt="slide">
+     </div>
+     </div>
+    </section>
+    <section class="Produtos">
+      <h1>PRODUTOS</h1>
+      <ul id="produtos">
+      </ul>
+      <button id="loadMoreButton">Carregar Mais</button>
+    </section>
   </main>
+  <!--WhatsApp button-->
+  <img src="./img/whatsappicon/whatsapp.png" alt="whatsapp 
+  icon" id="whatsapp-button" class="floating-button">
   <footer>
-    <input type="button" value="admin" id="admin" onclick="submit()">
+    <div class="imgdiv" id="imgdiv">
+      <img src="./img/perfil/perfil.jpeg" alt="perfil">
+    </div>
+    <span>Formas de pagamentos</span><br>
+    <div class="divPagamentos">
+      <div class="fundodoformadepagamentos">
+      <img src="./img/formasdepagamentos/mastercard.svg" alt="mastercard" class="FormasPagamentos">
+      </div>
+      <div class="fundodoformadepagamentos">
+      <img src="./img/formasdepagamentos/visa.svg" alt="visa" class="FormasPagamentos"></div>
+      <div class="fundodoformadepagamentos">
+      <img src="./img/formasdepagamentos/elo.svg" alt="elo" class="FormasPagamentos"></div>
+      <div class="fundodoformadepagamentos">
+      <img src="./img/formasdepagamentos/boleto.svg" alt="boleto" class="FormasPagamentos"></div>
+      <div class="fundodoformadepagamentos">
+      <img src="./img/formasdepagamentos/pix.svg" alt="pix" class="FormasPagamentos"></div>
+      
+    </div>
   </footer>
-
-  <script>
-    function submit(){
-  window.location.href="login.html"
-}
-  </script>
 </body>
 </html>

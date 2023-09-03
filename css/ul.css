@@ -1,0 +1,90 @@
+
+
+:root{
+ --roboto:'Playfair Display', serif;
+ --roboto1:'Roboto', sans-serif;
+ --corcinza:#313131;
+ --corpreto:#181818;
+ --corrosa:#EC0089;
+ --corbranco1:#F1F1F1;
+ --corbranco:white;
+}
+
+
+
+
+main ul{
+  display: flex;
+  list-style: none;
+  padding: 0px;
+}
+ul li{
+  margin-right: 10px;
+}
+.fundo1{
+  background-color: var(--corbranco);
+  padding: 4px;
+  box-shadow:1px 1px 4px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+}
+.fundo2{
+  background-color:white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+
+.img{
+  width: 296px;
+  height: 444px;
+}
+@media screen and (max-width: 480px) {
+
+  .fundo1 {
+    background-color: white ;
+    width:100%;
+    height: 420px;
+    margin-bottom: 5px;
+  }
+
+  .img {
+    width: 160px;
+    height: 242px;
+  }
+
+
+  main ul{
+      display: block;
+      padding: 0px;
+      column-count: 2;
+      column-gap: 2px;
+    }
+      .precos{
+        color: var(--corrosa);
+        font-family: var(--roboto1);
+        font-size: 19px;
+        font-weight: bold;
+        margin: 9px 1px 10px 6px;
+
+      }
+      .nome{
+        color: var(--corpreto);
+        font-family: var(--roboto1);
+        font-size: 25px;
+        font-weight: 500;
+      }
+    
+    .vermais{
+      background-color: var(--corrosa);
+      color: var(--corbranco);
+      font-size: 14px;
+      width: 85%;
+      padding: 15px;
+      margin-top: 50px;
+      border: none;
+      font-family: var(--roboto1);
+    }
+}

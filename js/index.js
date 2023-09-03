@@ -15,73 +15,78 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 const produtos = document.getElementById("produtos");
-const imgdiv = document.getElementById("imgdiv");
+let produtosExibidos = 4 ;
 
-async function perfil(){
-  try{
-    const imgperfil = collection(db, "perfil");
-    const Urlperfil = await getDocs(imgperfil);
-
-    Urlperfil.forEach((doc) =>{
-      const datap = doc.data();
-      const perfilurl = datap.perfil;
-      const imgpp = document.createElement("img");
-      imgpp.src = perfilurl
-      imgdiv.appendChild(imgpp)
-
-    })
-
-  }catch(error){
-    console.error("Erro ao obter dados do Firestore:", error);
-  }
-};
 
 // Função para exibir as imagens dos produtos do Firestore
 async function exibirImagens() {
   try {
     const produtosRef = collection(db, "produtos");
     const produtosSnapshot = await getDocs(produtosRef);
+     produtos.innerHTML="";
+     let produtosExibidosAtual = "";
 
     produtosSnapshot.forEach((doc) => {
+      if (produtosExibidosAtual < produtosExibidos){
       const data = doc.data();
       const imgUrl = data.imgP;
       const name = data.nome; 
       const preco = data.precos
+      const docId = doc.id;
 
       // Criar um elemento de imagem e atribuir a URL como a origem (src) da imagem
       const imgElement = document.createElement("img");
       imgElement.src = imgUrl;
       imgElement.classList.add("img");
-
       const fundo1 = document.createElement("div");
       fundo1.classList.add("fundo1");   
       const titulo = document.createElement("h1");
       titulo.classList.add("nome")
       titulo.innerHTML= name;
-      const linha  = document.createElement("div");
-      linha.classList.add("linha");
-      const precos = document.createElement("h2");
+      const precos = document.createElement("span");
       precos.classList.add("precos")
-      precos.innerHTML= preco
+      precos.innerHTML=`R$${preco}`
+      const vermais = document.createElement("button")
+      vermais.classList.add("vermais")
+      vermais.innerHTML ="VIEW MORE"
+      vermais.addEventListener("click", function () {
+        const url = `produto.html?docId=${encodeURIComponent(docId)}&name=${encodeURIComponent(name)}&preco=${encodeURIComponent(preco)}`;
+        window.location.href = url;
+      });
+      const fundo2 =document.createElement("div")
+      fundo2.classList.add("fundo2")
       const li = document.createElement("li");
+      li.id="lii"
      
 
   
-      fundo1.appendChild(imgElement);
-      fundo1.appendChild(titulo)
-      fundo1.appendChild(linha)
+      fundo1.appendChild(imgElement); 
       fundo1.appendChild(precos)
+      fundo1.appendChild(fundo2)
+      fundo2.appendChild(titulo)
+      fundo2.appendChild(vermais)
       li.appendChild(fundo1);
       produtos.appendChild(li);
+      produtosExibidosAtual++;
+    }
     });
-  } catch (error) {
-    console.error("Erro ao obter dados do Firestore:", error);
+ // Verifique se ainda há mais produtos para carregar
+  if (produtosExibidosAtual < produtosSnapshot.size) {
+    const loadMoreButton = document.getElementById("loadMoreButton")
+    loadMoreButton.addEventListener("click", () => {
+      // Incrementa o número de produtos exibidos quando o botão é clicado
+      produtosExibidos += 4;
+      exibirImagens();
+    });
   }
+} catch (error) {
+  console.error("Erro ao obter dados do Firestore:", error);
 }
+}
+
 
 // Chamar a função para exibir as imagens quando a página carregar
 window.addEventListener("load",() =>{
   exibirImagens();
-  perfil();
 });
 
