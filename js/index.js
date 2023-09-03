@@ -55,12 +55,15 @@ async function exibirImagens() {
       });
       const fundo2 =document.createElement("div")
       fundo2.classList.add("fundo2")
+      const divimg = document.createElement("div")
+      divimg.classList.add("divimg")
       const li = document.createElement("li");
       li.id="lii"
      
 
   
-      fundo1.appendChild(imgElement); 
+      divimg.appendChild(imgElement);
+      fundo1.appendChild(divimg) 
       fundo1.appendChild(precos)
       fundo1.appendChild(fundo2)
       fundo2.appendChild(titulo)
