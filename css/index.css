@@ -15,286 +15,145 @@
   margin: 0px;
   
 }
-header{
-  background-color: var(--corcinza);
-}
 nav{
   background-color: var(--corpreto);
  
 }
+
 footer{
   background-color:var(--corpreto) ;
 }
 
+header{
+  width: 100%;
+  height: 88px;
+  margin: -1px;
+}
+nav{
+  width: 100%;
+  height:120px;
+  margin: -1px;
+  position: relative;
 
-@media (max-width:480px){
-  body{
-    overflow-x: hidden;
-  }
-  header{
-    height: 88px;
-    margin: -1px;
-  }
-  nav{
-    height:120px;
-    margin: -1px;
-    position: relative;
-
-  }
-  .navcenter {
-    position: absolute;
-    bottom: 0;
-    left: 50%; /* Centraliza horizontalmente */
-    transform: translateX(-50%); /* Move de volta à esquerda pela metade da largura da imagem */
-  }
-  .divButtonNav{
-    margin-top: 16px;
-    text-align: center;
-  }
-  nav select{
-    background-color: #e4e3e3;
-    color: var(--corcinza);
-    border: 1px solid #ddd;
-    width: 100%;
-    height:30px;
-    padding: 5px;
-    cursor: pointer;
-    font-size: 18px;
-    margin-left: 3px;
-    outline: none;
-
-  }
-
-  .slidese{
-    background-image: linear-gradient(to top,var(--corbranco)80% ,#404040); 
-    height: 200px;
-   padding: 30px 9px 1px 9px;
-  }
-  .slideshow-container {
-    max-width:100%;
-    height: 200px;
-    position: relative;
-    margin: auto;
-    overflow: hidden;
-  }
-
-  .slide {
+}
+.navcenter {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  opacity: 0; /* Inicialmente, torna todas as imagens invisíveis */
-  transition: opacity 1s ease; /* Transição suave de opacidade */
+  bottom: 0;
+  left: 50%; /* Centraliza horizontalmente */
+  transform: translateX(-50%); /* Move de volta à esquerda pela metade da largura da imagem */
 }
-.slide.active {
-  opacity: 1; /* Torna a imagem visível */
+.divButtonNav{
+  margin-top: 16px;
+  text-align: center;
 }
-
- .slide img   {
+nav select{
+  background-color: #e4e3e3;
+  color: var(--corcinza);
+  border: 1px solid #ddd;
   width: 100%;
-  height:auto;
- }
- main h1 {
-  color:var(--corpreto);
-  text-align: center;
-  font-size: 27px;
-  font-family: var(--roboto1);
-  margin-bottom: 20px;
- }
- .Produtos{
-  text-align: center;
- }
- .loadMoreButton{
-  background-color: var(--corrosa);
-  font-size: 20px;
-  font-family: var(--roboto1);
-  margin-bottom: 3px;
-  color: white;
-  padding: 8px;
-
- }
-
-.floating-button {
-  width: 49px;
-  width: 49px;
-  position: fixed;
-  bottom: 20px;
-  right: 5px;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 50px;
+  height:30px;
+  padding: 5px;
   cursor: pointer;
-  z-index: 999; /* Certifique-se de que o botão esteja sempre na parte superior */
-}
-
-
- footer{
-  color: var(--corbranco);
   font-size: 18px;
-  font-family: var(--roboto1);
-  padding: 10px;
- }
- footer .imgdiv{
-  text-align: center;
-  margin: 17px 1px 34px 1px;
- }
- footer .imgdiv img{
-  width: 45%;
-  border-radius: 100%;
-  border: 1px solid var(--corpreto);
-  
+  margin-left: 3px;
+  outline: none;
 
- }
-
- footer .divPagamentos{
-  margin-top: 10px;
-  text-align: center;
-  color:var(--corbranco);
-  display: flex;
-}
-footer .fundodoformadepagamentos{
-  background-color: var(--corbranco);
-  width:43px;
-  height: 32px;
-  margin-left: 5px;
-  padding: 2px;
-}
 }
 
+.slidese{
+  background-image: linear-gradient(to top,var(--corbranco)80% ,#404040); 
+  height: 200px;
+ padding: 30px 9px 1px 9px;
+}
+.slideshow-container {
+  max-width:100%;
+  height: 200px;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+}
 
-@media (min-width: 481px) and (max-width: 770px) {
-  body{
-    overflow-x: hidden;
-  }
-  header{
-    width: 770px;
-    height: 88px;
-    margin: -1px;
-  }
-  nav{
-    width: 100%;
-    height:120px;
-    margin: -1px;
-    position: relative;
-
-  }
-  .navcenter {
-    position: absolute;
-    bottom: 0;
-    left: 50%; /* Centraliza horizontalmente */
-    transform: translateX(-50%); /* Move de volta à esquerda pela metade da largura da imagem */
-  }
-  .divButtonNav{
-    margin-top: 16px;
-    text-align: center;
-  }
-  nav select{
-    background-color: #e4e3e3;
-    color: var(--corcinza);
-    border: 1px solid #ddd;
-    width: 100%;
-    height:30px;
-    padding: 5px;
-    cursor: pointer;
-    font-size: 18px;
-    margin-left: 3px;
-    outline: none;
-
-  }
-
-  .slidese{
-    background-image: linear-gradient(to top,var(--corbranco)80% ,#404040); 
-    height: 200px;
-   padding: 30px 9px 1px 9px;
-  }
-  .slideshow-container {
-    max-width:100%;
-    height: 200px;
-    position: relative;
-    margin: auto;
-    overflow: hidden;
-  }
-
-  .slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  opacity: 0; /* Inicialmente, torna todas as imagens invisíveis */
-  transition: opacity 1s ease; /* Transição suave de opacidade */
+.slide {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+opacity: 0; /* Inicialmente, torna todas as imagens invisíveis */
+transition: opacity 1s ease; /* Transição suave de opacidade */
 }
 .slide.active {
-  opacity: 1; /* Torna a imagem visível */
+opacity: 1; /* Torna a imagem visível */
 }
 
- .slide img   {
-  width: 100%;
-  height:auto;
- }
- main h1 {
-  color:var(--corpreto);
-  text-align: center;
-  font-size: 32px;
-  font-family: var(--roboto1);
-  margin:30px 0px 20px 0px ;
- }
- .Produtos{
-  text-align: center;
- }
+.slide img   {
+width: 100%;
+height:auto;
+}
+main .PP {
+color:var(--corpreto);
+text-align: center;
+font-size: 32px;
+font-family: var(--roboto1);
+margin:30px 0px 20px 0px ;
+}
+.Produtos{
+text-align: center;
+}
 
- .loadMoreButton{
-  background-color: var(--corrosa);
-  font-size: 25px;
-  font-family: var(--roboto1);
-  margin-bottom: 3px;
-  color: white;
-  padding: 8px;
+.loadMoreButton{
+background-color: var(--corrosa);
+font-size: 25px;
+font-family: var(--roboto1);
+margin-bottom: 3px;
+color: white;
+padding: 8px;
 
- }
+}
 
 .floating-button {
-  width: 60px;
-  width: 60px;
-  position: fixed;
-  bottom: 20px;
-  right: 5px;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  z-index: 999; /* Certifique-se de que o botão esteja sempre na parte superior */
+width: 60px;
+width: 60px;
+position: fixed;
+bottom: 20px;
+right: 5px;
+padding: 10px 20px;
+border: none;
+border-radius: 50px;
+cursor: pointer;
+z-index: 999; /* Certifique-se de que o botão esteja sempre na parte superior */
 }
 
 
- footer{
-  color: var(--corbranco);
-  font-size: 22px;
-  font-family: var(--roboto1);
-  padding: 10px;
- }
- footer .imgdiv{
-  text-align: center;
-  margin: 17px 1px 34px 1px;
- }
- footer .imgdiv img{
-  width: 45%;
-  border-radius: 100%;
-  border: 1px solid var(--corpreto);
-  
+footer{
+color: var(--corbranco);
+font-size: 22px;
+font-family: var(--roboto1);
+padding: 10px;
+}
+footer .imgdiv{
+text-align: center;
+margin: 17px 1px 34px 1px;
+}
+footer .imgdiv img{
+width: 45%;
+border-radius: 100%;
+border: 1px solid var(--corpreto);
 
- }
 
- footer .divPagamentos{
-  margin-top: 10px;
-  text-align: center;
-  color:var(--corbranco);
-  display: flex;
+}
+
+footer .divPagamentos{
+margin-top: 10px;
+text-align: center;
+color:var(--corbranco);
+display: flex;
 }
 footer .fundodoformadepagamentos{
-  background-color: var(--corbranco);
-  width:60px;
-  height: 32px;
-  margin-left: 5px;
-  padding: 2px;
+background-color: var(--corbranco);
+width:60px;
+height: 32px;
+margin-left: 5px;
+padding: 2px;
 }
-}
+
+

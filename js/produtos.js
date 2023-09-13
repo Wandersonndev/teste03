@@ -9,7 +9,7 @@ let productData = {
 vermais.addEventListener("click", function () {
   // Armazene os dados do produto nas variáveis globais
   productData.imgUrl = imgUrl;
-  productData.name = name;
+  productData.name = name1;
   productData.preco = preco;
 
   // Redirecione para a próxima página (produto.html)

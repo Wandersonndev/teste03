@@ -12,51 +12,48 @@
 
 
 @media screen and (min-width: 770px) {
-  main #produtos {
-    column-count: 4;
-    column-gap: 3px;
+  .sectionprodutosSearch{
+    margin-top: 10px;
   }
 
   #produtos li {
-    width: calc(20% - 10px); /* 20% para 5 colunas com espaçamento de 10px entre elas */
+    width: calc(20% - 10px);
+    /* 20% para 5 colunas com espaçamento de 10px entre elas */
     margin-right: 10px;
-  }
-  .lii{
-    list-style-type:none;
   }
 
   .fundo1 {
     background-color: var(--corbranco);
     width: 300px;
-    
+
     padding: 4px;
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
     background-color: white;
   }
-  
+
   .divimg {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 5px;
   }
-  
+
   .fundo2 {
     background-color: white;
     display: flex;
     flex-direction: column;
     align-items: center;
-  
+
   }
-  
-  
+
+
   .img {
     width: 260px;
     height: 342px;
   }
-  
-  
-  
+
+
+
   .precos {
     color: var(--corrosa);
     font-family: var(--roboto1);
@@ -64,17 +61,17 @@
     font-weight: bold;
     margin: 9px 1px 10px 6px;
     margin-right: 270px;
-  
+
   }
-  
+
   .nome {
     color: var(--corpreto);
     font-family: var(--roboto1);
     font-size: 30px;
     font-weight: 500;
-  
+
   }
-  
+
   .vermais {
     background-color: var(--corrosa);
     color: var(--corbranco);
@@ -89,6 +86,34 @@
 
 
 @media (min-width: 481px) and (max-width: 770px) {
+  #sectionprodutosSearch{
+   min-height: 700px;
+  }
+  .divSearchendButton{
+    background-color: var(--corpreto);
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    padding: 33px 5px 10px 5px;
+
+   
+  }
+  #searchInput{
+    background-color: var(--corbranco);
+    width: 80%;
+    height: 33px;
+    margin-right: 10px;
+    padding: 3px;
+    border-radius: 0px;
+  }
+  .btn-search{
+
+    width: 40px;
+    height: 40px;
+  }
+  .liiSearch{
+    margin-bottom: 2px;
+  }
 
   .fundo1 {
     background-color: white;
@@ -108,9 +133,6 @@
     padding: 0px;
     column-count: 2;
     column-gap: 2px;
-  }
-  .lii{
-    list-style-type:none;
   }
 
   .precos {
@@ -146,53 +168,69 @@
 
 @media screen and (max-width: 480px) {
 
-  .fundo1 {
+  #sectionprodutosSearch{
+   min-height: 700px;
+  }
+  .divSearchendButton{
+    background-color: var(--corpreto);
+    display: flex;
+    align-items: center;
+    padding: 4px;
+    padding: 33px 5px 10px 5px;
+
+   
+  }
+  #searchInput{
+    background-color: var(--corbranco);
+    width: 80%;
+    height: 33px;
+    margin-right: 10px;
+    padding: 3px;
+    border-radius: 0px;
+  }
+  .btn-search{
+
+    width: 40px;
+    height: 40px;
+  }
+  .liiSearch{
+    margin-bottom: 2px;
+  }
+
+  .fundo1Search {
     background-color: white;
+    margin-bottom: 2px;
+    border: 1px solid black;
+    padding: 2px;
+    display: flex;
+  }
+
+  .fundo2Search {
     width: 100%;
-    height: 420px;
-    margin-bottom: 5px;
   }
 
-  .img {
-    width: 160px;
-    height: 242px;
+  .imgSearch {
+    width: 140px;
+    height: 141px;
   }
 
 
-  main #produtos{
-    display: block;
-    padding: 0px;
-    column-count: 2;
-    column-gap: 2px;
-  }
-  .lii{
-    list-style-type:none;
-  }
-
-  .precos {
+  .precosSearch {
     color: var(--corrosa);
     font-family: var(--roboto1);
     font-size: 19px;
     font-weight: bold;
-    margin: 9px 1px 10px 6px;
-    margin-right: 138px;
 
   }
 
-  .nome {
-    color: var(--corpreto);
-    font-family: var(--roboto1);
-    font-size: 25px;
-    font-weight: 500;
-  }
+  
 
-  .vermais {
+  .vermaisSearch {
     background-color: var(--corrosa);
     color: var(--corbranco);
     font-size: 14px;
     width: 85%;
     padding: 15px;
-    margin-top: 1%;
     border: none;
     font-family: var(--roboto1);
   }

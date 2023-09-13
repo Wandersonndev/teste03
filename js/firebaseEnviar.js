@@ -19,16 +19,23 @@ document.getElementById("dados").addEventListener("submit", async (event) => {
 
   const nome = document.getElementById("name").value;
   const imgP = document.getElementById("fotoP").value;
+  const img11 = document.getElementById("img11").value;
+  const img22 = document.getElementById("img22").value;
+  const img33 = document.getElementById("img33").value;
   const genero = document.getElementById("generos").value;
   const categoria = document.getElementById("categorias").value;
   const colecoes =document.getElementById("colecoes").value;
   const precos = document.getElementById("precos").value;
   const cor = document.getElementById("cor").value;
 
+
   try {
     await addDoc(collection(db, "produtos"), {
       nome: nome,
       imgP: imgP,
+      img1: img11,
+      img2: img22,
+      img3: img33,
       genero: genero,
       categoria:categoria,
       colecoes: colecoes,
