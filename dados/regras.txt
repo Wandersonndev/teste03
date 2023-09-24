@@ -1,0 +1,23 @@
+bloqueia as gravações
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Permitir a leitura de qualquer documento
+    match /{document=**} {
+      allow read;
+    }
+  }
+}
+
+
+
+
+deixa gravar
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /produtos/{document=**} {
+      allow read, write; // Permite leitura e gravação de dados em todos os documentos da coleção "produtos"
+    }
+  }
+}

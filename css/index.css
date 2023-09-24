@@ -36,6 +36,26 @@ nav{
   position: relative;
 
 }
+.spinnerCenter{
+ 
+  display: flex;
+  justify-content: center;
+}
+@keyframes spin{
+  to{
+    transform: rotate(360deg);
+  }
+}
+.spinner{
+  width: 80px;
+  height: 80px;
+  border: 20px solid  var(--corbranco);
+  border-top-color: var(--corrosa);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+
+}
+
 .navcenter {
   position: absolute;
   bottom: 0;

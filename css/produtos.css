@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap');
+
+:root {
+  --roboto: 'Playfair Display', serif;
+  --roboto1: 'Roboto', sans-serif;
+  --corcinza: #313131;
+  --corpreto: #181818;
+  --corrosa: #EC0089;
+  --corbranco1: #F1F1F1;
+  --corbranco: white;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinnerCenter {
+
+  display: flex;
+  justify-content: center;
+}
+
+.spinner {
+  width: 80px;
+  height: 80px;
+  border: 20px solid var(--corbranco);
+  border-top-color: var(--corrosa);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+
+}
+
+header {
+  background-color: var(--corcinza);
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Imagens {
+  margin: 20px;
+  display: flex;
+  overflow-x: auto;
+  /* Permite a rolagem horizontal no celular */
+  scroll-snap-type: x mandatory;
+  /* Força a rolagem a parar em cada 
+  imagem */
+
+}
+
+.Imagens img {
+  width: 399px;
+  height: 399px;
+}
+
+.name {
+  color: var(--corbranco);
+  text-align: center;
+  font-family: var(--roboto1);
+  font-size: 30px;
+}
+
+.rodaper{
+  display: flex;
+  justify-content: center;
+}
+
+.preco {
+  font-family: var(--roboto1);
+  font-size: 20px;
+  font-weight: bold;
+  margin: 43px 0px 22px 6px
+}
+
+
+.whatsapp{
+  background-color:var(--corrosa) ;
+  color: var(--corbranco);
+  border: none;
+  width: 90%;
+  height: 40px;
+  font-family: var(--roboto1);
+  font-size: 20px;
+
+}
+
+@media (max-width: 768px) {
+  .imagenCatalogo {
+    display: block; /* Exibe todas as imagens no celular */
+  }
+  .Imagens {
+    overflow-x: auto; /* Permite a rolagem horizontal no celular */
+    flex-wrap: nowrap; /* Impede que as imagens se quebrem em várias linhas */
+  }
+}
+
+
+
+
